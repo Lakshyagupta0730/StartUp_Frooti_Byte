@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now — FrootiBytes (Crispora)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        frooti: {
+                            red: '#EE3238',
+                            redHover: '#D02127',
+                            yellow: '#FBB03B',
+                            green: '#54B948',
+                            cream: '#FAF4E8',
+                            dark: '#2D2421',
+                            cardBg: '#FFFBF5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-[#FAF4E8]">
+
+    <div>
+        <!-- Navigation Header -->
+        <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between sticky top-0 bg-[#FAF4E8]/90 backdrop-blur-md z-50 border-b border-frooti-yellow/20">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="logo.ico" alt="FrootiBytes Logo" class="logo-img hover:scale-105 transition-transform">
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-bold text-frooti-dark">
+                <a href="index.html" class="hover:text-frooti-red transition-colors">Home</a>
+                <a href="index.html#about" class="hover:text-frooti-red transition-colors">About Us</a>
+                <a href="index.html#features" class="hover:text-frooti-red transition-colors">Why FrootiBytes</a>
+                <a href="index.html#team" class="hover:text-frooti-red transition-colors">Team</a>
+            </nav>
+
+            <a href="index.html" class="text-sm font-bold text-frooti-red hover:underline flex items-center gap-1">
+                <i class="fa-solid fa-arrow-left"></i> Back to Main
+            </a>
+        </header>
+
+        <!-- Order Page Hero / Title -->
+        <section class="max-w-7xl mx-auto px-6 pt-10 pb-6 text-center">
+            <span class="inline-block bg-frooti-yellow/20 text-frooti-dark border border-frooti-yellow/50 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-3">
+                🥭 Freshly Dehydrated • 100% Natural • Fast Delivery
+            </span>
+            <h1 class="text-3xl md:text-5xl font-black text-frooti-dark">
+                Place Your <span class="text-frooti-red">FrootiBytes</span> Order
+            </h1>
+            <p class="text-stone-600 mt-2 text-sm md:text-base max-w-xl mx-auto">
+                Select your favorite fruit snack crunchies, adjust quantities, and complete your order in seconds.
+            </p>
+        </section>
+
+        <!-- Main Order Interface Section -->
+        <section class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left Column: Product Selection Grid (2 columns on lg screens) -->
+            <div class="lg:col-span-2 space-y-6">
+                <h2 class="text-xl font-extrabold text-frooti-dark flex items-center gap-2">
+                    <i class="fa-solid fa-basket-shopping text-frooti-red"></i> 1. Choose Your Snack Packs
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Product Item 1 -->
+                    <div class="bg-white rounded-2xl p-5 border border-frooti-yellow/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-36 rounded-xl bg-gradient-to-br from-amber-100 to-yellow-50 flex items-center justify-center text-5xl mb-4 relative">
+                                🍍
+                                <span class="absolute top-2 right-2 bg-frooti-red text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Bestseller</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-frooti-dark">Crispy Pineapple Crunch</h3>
+                            <p class="text-xs text-stone-500 mt-1">Tangy, sweet freeze-dried pineapple slices packed with vitamin C.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <span class="font-extrabold text-frooti-red text-lg">₹20 <span class="text-xs text-stone-400 font-normal">/ 16g</span></span>
+                            <button onclick="addToOrder('Crispy Pineapple Crunch', 20)" class="bg-frooti-yellow hover:bg-amber-400 text-frooti-dark font-bold text-xs px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-sm">
+                                + Add Pack
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Item 2 -->
+                    <div class="bg-white rounded-2xl p-5 border border-frooti-yellow/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-36 rounded-xl bg-gradient-to-br from-green-100 to-emerald-50 flex items-center justify-center text-5xl mb-4">
+                                🥝
+                            </div>
+                            <h3 class="font-bold text-lg text-frooti-dark">Tangy Kiwi Bytes</h3>
+                            <p class="text-xs text-stone-500 mt-1">Zesty dried kiwi crisps loaded with dietary fiber and punchy taste.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <span class="font-extrabold text-frooti-red text-lg">₹20 <span class="text-xs text-stone-400 font-normal">/ 16g</span></span>
+                            <button onclick="addToOrder('Tangy Kiwi Bytes', 20)" class="bg-frooti-yellow hover:bg-amber-400 text-frooti-dark font-bold text-xs px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-sm">
+                                + Add Pack
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Item 3 -->
+                    <div class="bg-white rounded-2xl p-5 border border-frooti-yellow/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-36 rounded-xl bg-gradient-to-br from-red-100 to-rose-50 flex items-center justify-center text-5xl mb-4">
+                                🍎
+                            </div>
+                            <h3 class="font-bold text-lg text-frooti-dark">Red Apple Cinnamon Chips</h3>
+                            <p class="text-xs text-stone-500 mt-1">Naturally sweet red apples dusted with organic Sri Lankan cinnamon.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <span class="font-extrabold text-frooti-red text-lg">₹20 <span class="text-xs text-stone-400 font-normal">/ 16g</span></span>
+                            <button onclick="addToOrder('Red Apple Cinnamon Chips', 20)" class="bg-frooti-yellow hover:bg-amber-400 text-frooti-dark font-bold text-xs px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-sm">
+                                + Add Pack
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Item 4 -->
+                <!--    <div class="bg-white rounded-2xl p-5 border border-frooti-yellow/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-36 rounded-xl bg-gradient-to-br from-orange-100 to-amber-50 flex items-center justify-center text-5xl mb-4 relative">
+                                🥭
+                                <span class="absolute top-2 right-2 bg-frooti-green text-white text-[10px] font-bold px-2 py-0.5 rounded-full">New</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-frooti-dark">Alphonso Mango Bytes</h3>
+                            <p class="text-xs text-stone-500 mt-1">Rich, aromatic dried Alphonso mango chunks with zero added sugar.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <span class="font-extrabold text-frooti-red text-lg">₹199 <span class="text-xs text-stone-400 font-normal">/ 50g</span></span>
+                            <button onclick="addToOrder('Alphonso Mango Bytes', 199)" class="bg-frooti-yellow hover:bg-amber-400 text-frooti-dark font-bold text-xs px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-sm">
+                                + Add Pack
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>-->
+
+            <!-- Right Column: Cart Summary & Delivery Details Form -->
+            <div class="space-y-6">
+                
+                <!-- Order Summary Box -->
+                <div class="bg-white rounded-3xl p-6 border border-frooti-yellow/40 shadow-sm sticky top-24">
+                    <h2 class="text-xl font-extrabold text-frooti-dark mb-4 flex items-center justify-between">
+                        <span><i class="fa-solid fa-receipt text-frooti-red"></i> Your Order</span>
+                        <span id="cart-count" class="bg-frooti-red text-white text-xs px-2.5 py-0.5 rounded-full">0 Items</span>
+                    </h2>
+
+                    <!-- Cart List -->
+                    <div id="cart-list" class="space-y-3 mb-4 max-h-48 overflow-y-auto pr-1 divide-y divide-stone-100 text-sm">
+                        <p class="text-xs text-stone-400 text-center py-6">Your basket is currently empty. Add some fruit packs to begin!</p>
+                    </div>
+
+                    <!-- Pricing Calculation -->
+                    <div class="border-t border-frooti-yellow/30 pt-3 space-y-2 text-xs text-stone-600">
+                        <div class="flex justify-between">
+                            <span>Subtotal</span>
+                            <span id="subtotal-val" class="font-semibold text-frooti-dark">₹0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Delivery Fee</span>
+                            <span id="delivery-val" class="font-semibold text-frooti-green">Free</span>
+                        </div>
+                        <div class="flex justify-between text-base font-extrabold text-frooti-dark border-t border-stone-100 pt-2">
+                            <span>Total</span>
+                            <span id="total-val" class="text-frooti-red">₹0</span>
+                        </div>
+                    </div>
+
+                    <!-- Customer Form -->
+                    <form id="checkout-form" onsubmit="submitOrder(event)" class="mt-6 space-y-3">
+                        <h3 class="text-xs font-extrabold uppercase text-stone-400 tracking-wider">Delivery Information</h3>
+                        
+                        <div>
+                            <input type="text" id="cust-name" required placeholder="Full Name" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none focus:border-frooti-red bg-frooti-cream/40">
+                        </div>
+                        <div>
+                            <input type="tel" id="cust-phone" required placeholder="Phone Number" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none focus:border-frooti-red bg-frooti-cream/40">
+                        </div>
+                        <div>
+                            <textarea id="cust-address" required placeholder="Delivery Address" rows="2" class="w-full text-xs p-3 rounded-xl border border-stone-200 focus:outline-none focus:border-frooti-red bg-frooti-cream/40 resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-frooti-red hover:bg-frooti-redHover text-white font-bold text-sm py-3.5 rounded-2xl shadow-lg shadow-frooti-red/25 transition-all hover:scale-[1.02] active:scale-95">
+                            Confirm & Place Order
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="order-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center border-2 border-frooti-green shadow-2xl relative">
+            <div class="w-16 h-16 bg-frooti-green/10 text-frooti-green rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-frooti-dark">Order Confirmed!</h3>
+            <p class="text-stone-600 text-xs mt-2">Thank you for choosing FrootiBytes. Your healthy fruit crunchies will be prepared and shipped shortly.</p>
+            
+            <div class="my-4 p-3 bg-frooti-cream rounded-xl text-left text-xs space-y-1 text-stone-700">
+                <p><strong>Order ID:</strong> <span id="modal-order-id" class="text-frooti-red font-mono">#FB-88421</span></p>
+                <p><strong>Customer:</strong> <span id="modal-cust-name">-</span></p>
+                <p><strong>Total Paid:</strong> <span id="modal-total" class="font-bold text-frooti-dark">-</span></p>
+            </div>
+
+            <button onclick="closeModal()" class="w-full bg-frooti-dark text-white font-bold text-xs py-3 rounded-xl hover:bg-stone-800 transition-colors">
+                Back to Store
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-frooti-dark text-white/80 py-8 px-6 mt-16 border-t-4 border-frooti-red">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+            <div class="flex items-center space-x-3">
+                <img src="logo.jpeg" alt="FrootiBytes Logo" class="h-8 w-auto bg-white p-1 rounded-lg">
+                <span class="font-bold text-white">FrootiBytes (Crispora)</span>
+            </div>
+            <p>&copy; 2026 FrootiBytes Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Cart Script -->
+    <script>
+        let cart = [];
+
+        function addToOrder(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartList = document.getElementById('cart-list');
+            const cartCount = document.getElementById('cart-count');
+            const subtotalVal = document.getElementById('subtotal-val');
+            const totalVal = document.getElementById('total-val');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            cartCount.textContent = `${totalItems} Item${totalItems !== 1 ? 's' : ''}`;
+
+            if (cart.length === 0) {
+                cartList.innerHTML = `<p class="text-xs text-stone-400 text-center py-6">Your basket is currently empty. Add some fruit packs to begin!</p>`;
+                subtotalVal.textContent = `₹0`;
+                totalVal.textContent = `₹0`;
+                return;
+            }
+
+            let subtotal = 0;
+            cartList.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+
+                cartList.innerHTML += `
+                    <div class="flex justify-between items-center pt-2">
+                        <div>
+                            <p class="font-bold text-frooti-dark text-xs">${item.name}</p>
+                            <p class="text-[10px] text-stone-400">₹${item.price} x ${item.qty}</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-xs text-frooti-dark">₹${itemTotal}</span>
+                            <button onclick="removeFromCart(${index})" class="text-stone-400 hover:text-frooti-red text-xs px-1">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            subtotalVal.textContent = `₹${subtotal}`;
+            totalVal.textContent = `₹${subtotal}`;
+        }
+
+        function submitOrder(event) {
+            event.preventDefault();
+            if (cart.length === 0) {
+                alert('Please add at least one item to your order!');
+                return;
+            }
+
+            const name = document.getElementById('cust-name').value;
+            const total = document.getElementById('total-val').textContent;
+
+            document.getElementById('modal-cust-name').textContent = name;
+            document.getElementById('modal-total').textContent = total;
+            document.getElementById('modal-order-id').textContent = '#FB-' + Math.floor(10000 + Math.random() * 90000);
+
+            document.getElementById('order-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('order-modal').classList.add('hidden');
+            cart = [];
+            updateCartUI();
+            document.getElementById('checkout-form').reset();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrootiBytes  — Real Fruit, Real Crunch, Real Joy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        frooti: {
+                            red: '#EE3238',
+                            redHover: '#D02127',
+                            yellow: '#FBB03B',
+                            green: '#54B948',
+                            cream: '#FAF4E8',
+                            dark: '#2D2421',
+                            cardBg: '#FFFBF5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <div>
+        <!-- Top Announcement Bar -->
+        <div class="bg-frooti-red text-white text-xs md:text-sm font-semibold py-2 px-4 text-center flex justify-between items-center max-w-7xl mx-auto rounded-b-xl shadow-sm">
+            <span>🎉 Launching Healthy Fruit Crunching Nationwide!</span>
+            <span class="bg-white/20 px-3 py-0.5 rounded-full text-xs font-bold">Created: 01/09/2026</span>
+        </div>
+
+        <!-- Header / Navigation -->
+        <header class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between sticky top-0 bg-[#FAF4E8]/90 backdrop-blur-md z-50">
+            <div class="flex items-center space-x-3">
+                <!-- Startup Logo -->
+                <a href="#">
+                    <img src="logo.ico" alt="FrootiBytes Logo" class="logo-img hover:scale-105 transition-transform">
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-bold text-frooti-dark">
+                <a href="#about" class="hover:text-frooti-red transition-colors">About Us</a>
+                <a href="#features" class="hover:text-frooti-red transition-colors">Why FrootiBytes</a>
+                <a href="#team" class="hover:text-frooti-red transition-colors">Leadership Team</a>
+                <a href="#roadmap" class="hover:text-frooti-red transition-colors">Roadmap</a>
+            </nav>
+
+            
+                <a href="order.html" class="bg-frooti-red hover:bg-frooti-redHover text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-frooti-red/25 transition-all hover:scale-105 active:scale-95 inline-block">
+    Order Now
+</a>
+            
+        </header>
+
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 py-10 md:py-16">
+            <div class="hero-gradient rounded-3xl p-8 md:p-14 border border-frooti-yellow/30 shadow-xl shadow-frooti-red/5 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                
+                <div class="max-w-2xl relative z-10">
+                    <span class="inline-block bg-white/90 backdrop-blur-sm border border-frooti-yellow/50 text-frooti-red text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6 shadow-sm">
+                        ✨ 100% Freeze-Dried & Dehydrated Fruit Snacks
+                    </span>
+                    
+                    <h1 class="text-4xl md:text-6xl font-black text-frooti-dark leading-tight mb-4">
+                        Real Fruit, <br>
+                        <span class="text-frooti-red underline decoration-frooti-yellow decoration-wavy">Real Crunch</span>, <br>
+                        Real Joy.
+                    </h1>
+                    
+                    <p class="text-stone-600 text-lg md:text-xl font-medium mb-8 leading-relaxed">
+                        Experience the revolutionary taste of guilt-free snacking. We lock in natural nutrients and intense fruity flavors into ultra-crispy bytes.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#about" class="bg-frooti-red hover:bg-frooti-redHover text-white text-center px-8 py-4 rounded-2xl font-bold shadow-md shadow-frooti-red/20 transition-all hover:scale-105">
+                            Learn About Us
+                        </a>
+                        <a href="#team" class="bg-white hover:bg-frooti-cream text-frooti-dark text-center px-8 py-4 rounded-2xl font-bold border border-frooti-yellow/60 transition-all shadow-sm">
+                            Meet Our Team
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured Hero Logo Showcase -->
+                <div class="relative z-10 flex flex-col items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-3xl border border-frooti-yellow/40 shadow-lg">
+                    <img src="logo.jpeg" alt="FrootiBytes Logo" class="logo-img-lg mb-4">
+                    <span class="text-xs font-bold text-frooti-green bg-frooti-green/10 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Pure Fruit Goodness
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Key Highlights / Features -->
+        <section id="features" class="max-w-7xl mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-frooti-yellow/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-frooti-green/15 text-frooti-green flex items-center justify-center text-2xl mb-4">
+                        🥝
+                    </div>
+                    <h3 class="font-bold text-lg text-frooti-dark mb-2">100% Natural</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Zero added sugar, no preservatives, and non-GMO. Pure fruit goodness directly from farms.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-frooti-yellow/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-frooti-yellow/20 text-frooti-yellow flex items-center justify-center text-2xl mb-4">
+                        🍍
+                    </div>
+                    <h3 class="font-bold text-lg text-frooti-dark mb-2">Advanced Dehydration</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Advanced preservation that locks in vital vitamins, rich aroma, and an addictive crunch.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-frooti-yellow/30 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-frooti-red/10 text-frooti-red flex items-center justify-center text-2xl mb-4">
+                        🍎
+                    </div>
+                    <h3 class="font-bold text-lg text-frooti-dark mb-2">On-The-Go Snacking</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Lightweight, mess-free pouches perfect for work, workout sessions, or kids' lunchboxes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="max-w-7xl mx-auto px-6 py-12">
+            <div class="bg-white rounded-3xl p-8 md:p-12 border border-frooti-yellow/40 shadow-sm space-y-12">
+                
+                <!-- Section Header -->
+                <div>
+                    <span class="text-frooti-red text-xs font-bold tracking-widest uppercase mb-2 block">Company Overview</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-frooti-dark tracking-tight">
+                        About FrootiBytes 
+                    </h2>
+                    <p class="text-stone-600 text-base md:text-lg mt-3 max-w-4xl leading-relaxed">
+                        FrootiBytes is an India-focused FMCG brand offering premium dehydrated fruit snacks as a joyful, nourishing alternative to conventional snacks. Its fruit-led products are made for households, snackers, professionals, parents, and curious consumers seeking better-for-you choices at home, at work, on the go, and beyond.
+                    </p>
+                </div>
+
+                <!-- Mission & Vision Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-frooti-cream/80 p-6 rounded-2xl border border-frooti-yellow/30">
+                        <h3 class="font-bold text-lg text-frooti-red mb-2">🎯 Our Mission</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            FrootiBytes exists to make everyday snacking more joyful, nourishing, and accessible by turning real fruit into a premium crunch people can choose over compromise.
+                        </p>
+                    </div>
+
+                    <div class="bg-frooti-cream/80 p-6 rounded-2xl border border-frooti-yellow/30">
+                        <h3 class="font-bold text-lg text-frooti-red mb-2">🏗️ What We're Building</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            An accessible, better-for-you alternative to potato chips. We bring fruit-led flavor through Kiranas, modern trade, DTC, e-commerce, and export partners, supported by digital lot traceability.
+                        </p>
+                    </div>
+
+                    <div class="bg-frooti-cream/80 p-6 rounded-2xl border border-frooti-yellow/30">
+                        <h3 class="font-bold text-lg text-frooti-red mb-2">🚀 Where We're Headed</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            A world where the snack bowl is no longer a choice between bland virtue and indulgent regret. Connecting farmers, makers, retailers, and families through a visible, accountable food chain.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Who It Serves & Offerings -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-frooti-dark mb-3">Who We Serve</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                            Households, snackers, professionals, parents, and curious global consumers seeking better-for-you fruit-based snacks, plus Kirana and other retail buyers seeking accessible-premium fruit snack products.
+                        </p>
+                        <div class="bg-frooti-cream p-4 rounded-xl border border-frooti-yellow/40">
+                            <span class="font-bold text-frooti-dark text-xs uppercase tracking-wider block mb-1">Brand Voice</span>
+                            <p class="text-frooti-red font-semibold text-sm">Bright, joyful, nourishing, accessible, and trustworthy.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-frooti-dark mb-3">Our Core Offerings</h3>
+                        <ul class="space-y-2 text-stone-600 text-sm">
+                            <li class="flex items-start"><span class="text-frooti-green font-bold mr-2">✓</span> Premium dehydrated fruit snacks</li>
+                            <li class="flex items-start"><span class="text-frooti-green font-bold mr-2">✓</span> Fruit-led alternatives to conventional potato-chip-style snacking</li>
+                            <li class="flex items-start"><span class="text-frooti-green font-bold mr-2">✓</span> Online storefront with multiple pack sizes and ordering</li>
+                            <li class="flex items-start"><span class="text-frooti-green font-bold mr-2">✓</span> Wholesale products and information for Kirana and retail buyers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Strategic Execution Roadmap -->
+                <div id="roadmap" class="pt-6 border-t border-frooti-yellow/20">
+                    <h3 class="text-2xl font-bold text-frooti-dark mb-6">Product & Feature Roadmap</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <!-- MVP -->
+                        <div class="border border-frooti-red/30 rounded-2xl p-6 bg-frooti-cream/40">
+                            <span class="bg-frooti-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Phase 1: MVP</span>
+                            <ul class="mt-4 space-y-2 text-xs text-stone-600 leading-relaxed">
+                                <li>• FrootiBytes storefront with fruit products, pack sizes, accessible-premium pricing, cart & order form.</li>
+                                <li>• Admin lot registry linking suppliers, fruit batches, processing dates, packaging lots & locations.</li>
+                                <li>• Product pages with ingredients, nutrition panels, allergen notes & "Why fruit crunch?" comparison.</li>
+                                <li>• Kirana-ready wholesale inquiry page with pack details, suggested retail pricing & product sheets.</li>
+                            </ul>
+                        </div>
+
+                        <!-- NEXT -->
+                        <div class="border border-frooti-yellow/50 rounded-2xl p-6 bg-white">
+                            <span class="bg-frooti-yellow text-frooti-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Phase 2: Next</span>
+                            <ul class="mt-4 space-y-2 text-xs text-stone-600 leading-relaxed">
+                                <li>• Customer order history and status tracking pages.</li>
+                                <li>• QR-linked batch lookup pages showing origin, processing lot, and recall contact instructions.</li>
+                                <li>• Admin traceability dashboard with lot search and shipment records.</li>
+                                <li>• DTC content hub with snack recipes, school-lunch ideas, and parent buying guides.</li>
+                                <li>• Retail channel landing page covering Kiranas, modern trade, and export readiness.</li>
+                            </ul>
+                        </div>
+
+                        <!-- LATER -->
+                        <div class="border border-frooti-green/30 rounded-2xl p-6 bg-white">
+                            <span class="bg-frooti-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Phase 3: Later</span>
+                            <ul class="mt-4 space-y-2 text-xs text-stone-600 leading-relaxed">
+                                <li>• Modern-trade catalog page tailored to supermarket buyers.</li>
+                                <li>• Export product library with country-specific labels (US, UAE, UK, Germany).</li>
+                                <li>• Four-quadrant segmentation page mapping health involvement vs purchase frequency.</li>
+                                <li>• Internal compliance checklist for FSSAI, APEDA, labeling, and certifications.</li>
+                                <li>• Interactive flavor discovery quiz based on taste and snacking occasion.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Founding & Leadership Team Section -->
+        <section id="team" class="max-w-7xl mx-auto px-6 py-12">
+            <div class="bg-white rounded-3xl p-6 md:p-10 border border-frooti-yellow/40 shadow-sm">
+                <div class="mb-8">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-frooti-dark tracking-tight mb-2">
+                        Founding & Leadership Team
+                    </h2>
+                    <p class="text-stone-600 text-sm md:text-base">
+                        Meet the visionaries driving product excellence, brand strategy, and retail expansion at FrootiBytes.
+                    </p>
+                </div>
+
+                <!-- Leadership Table Container -->
+                <div class="overflow-x-auto rounded-2xl border border-frooti-yellow/30 bg-frooti-cream/30">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-frooti-yellow/40 bg-frooti-yellow/20 text-frooti-dark text-sm font-bold">
+                                <th class="py-4 px-6">Name</th>
+                                <th class="py-4 px-6">Role</th>
+                                <th class="py-4 px-6">Focus Area</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-frooti-yellow/20 text-sm text-stone-800 font-medium">
+                            <tr class="table-row-hover transition-colors">
+                                <td class="py-4 px-6 font-bold text-frooti-red">Tubhyam</td>
+                                <td class="py-4 px-6 text-stone-700">Founder, CEO & Finance Lead</td>
+                                <td class="py-4 px-6 text-stone-600">Overall strategy, fundraising, financial planning, and final decision-making.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="py-4 px-6 font-bold text-frooti-red">Moksh</td>
+                                <td class="py-4 px-6 text-stone-700">Operations & Supply Chain Lead</td>
+                                <td class="py-4 px-6 text-stone-600">Supplier coordination, fruit sourcing, co-packer execution, and lot traceability.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="py-4 px-6 font-bold text-frooti-red">Naman</td>
+                                <td class="py-4 px-6 text-stone-700">Marketing & Brand Lead</td>
+                                <td class="py-4 px-6 text-stone-600">Brand positioning, social media, DTC content hub, and customer acquisition.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="py-4 px-6 font-bold text-frooti-red">Varnika</td>
+                                <td class="py-4 px-6 text-stone-700">Sales & Wholesale Lead</td>
+                                <td class="py-4 px-6 text-stone-600">Kirana onboarding, retailer pricing, product sheets, and channel expansion.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="py-4 px-6 font-bold text-frooti-red">Saloni</td>
+                                <td class="py-4 px-6 text-stone-700">Product & Customer Experience</td>
+                                <td class="py-4 px-6 text-stone-600">SKU planning, pricing support, order experience, and customer feedback loops.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-frooti-dark text-white/80 py-12 px-6 mt-12 border-t-4 border-frooti-red">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="logo.ico" alt="FrootiBytes Logo" class="h-10 w-auto bg-white p-1 rounded-lg">
+            </div>
+
+            <p class="text-xs text-center md:text-left text-stone-300">
+                &copy; 2026 FrootiBytes Inc. All rights reserved. Created on 01/09/2026.
+
+                 
+                Develop by Lakshya
+            
+            </p>
+           
+
+            <div class="flex space-x-6 text-frooti-yellow text-sm">
+                <a href="#" class="hover:text-frooti-red transition-colors"><i class="fab fa-instagram text-lg"></i></a>
+                <a href="#" class="hover:text-frooti-red transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+                <a href="#" class="hover:text-frooti-red transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
